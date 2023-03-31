@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>电子设计坑点</title>
+      <link href="/2023/03/31/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E5%9D%91%E7%82%B9/"/>
+      <url>/2023/03/31/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E5%9D%91%E7%82%B9/</url>
+      
+        <content type="html"><![CDATA[<h1 id="电子设计坑点"><a href="#电子设计坑点" class="headerlink" title="电子设计坑点"></a>电子设计坑点</h1><ol><li><p>PCB板到手上之后，一定要先通过代码检测外围电路，这一步千万不能省</p></li><li><p>如果外围电路出现了问题，首先应当检测电路的电压，如果电压正确就可以排除元器件本身的问题</p></li><li><p>然后再监测线路的通断，保证原理图和PCB板的正确性。</p></li><li><p>最后保证硬件没有进行过修改。举一个例子，我调试过一块板子，本来MAX485芯片与ESP32之间是直接通过线路相连的，但是硬件工程师在两个之间给我加了一个io缓冲芯片，而且芯片引脚还焊错。所以无法通过485进行通讯。</p><p>基于以上几点，大家做嵌入式在编写程序一定要先检查硬件电路。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 坑点 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 硬件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>状态挺好</title>
+      <link href="/2023/02/22/%E7%8A%B6%E6%80%81%E6%8C%BA%E5%A5%BD/"/>
+      <url>/2023/02/22/%E7%8A%B6%E6%80%81%E6%8C%BA%E5%A5%BD/</url>
+      
+        <content type="html"><![CDATA[<h1 id="状态挺好"><a href="#状态挺好" class="headerlink" title="状态挺好"></a>状态挺好</h1><ol><li>申论的精髓在于，答题结构和细心的圈关键词，划线成型的材料，合理成文</li><li>横向无脑抄材料、纵向整合分析材料</li><li>亢奋的心态+细心的答题框架+成文=申论高分</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 考公日记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 考公 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>就离谱</title>
+      <link href="/2023/02/21/%E5%B0%B1%E7%A6%BB%E8%B0%B1/"/>
+      <url>/2023/02/21/%E5%B0%B1%E7%A6%BB%E8%B0%B1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="真的离谱"><a href="#真的离谱" class="headerlink" title="真的离谱"></a>真的离谱</h1><ol><li>突然怀疑智商差距是在的</li><li>合适的休息+亢奋的心态+细心的审题=上岸</li><li>我已经进入臻境，这次必上岸</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 考公日记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 考公 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>找寻感觉</title>
+      <link href="/2023/02/20/%E6%89%BE%E5%AF%BB%E6%84%9F%E8%A7%89/"/>
+      <url>/2023/02/20/%E6%89%BE%E5%AF%BB%E6%84%9F%E8%A7%89/</url>
+      
+        <content type="html"><![CDATA[<h1 id="感觉似乎好些了"><a href="#感觉似乎好些了" class="headerlink" title="感觉似乎好些了"></a>感觉似乎好些了</h1><ol><li>感觉慢慢有些来了，跟整个人的亢奋程度有关，基本的知识，我已经了解了，没有很大的牵挂，过题也果断，这是考试的感觉，越做越兴奋</li><li>今日面试了三个，先做做硬件吧，自己偷偷学软件，英语，好好的培养自己。走Linux不会错的。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 考公日记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 考公 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>未来技术道路</title>
+      <link href="/2023/02/19/%E6%9C%AA%E6%9D%A5%E6%8A%80%E6%9C%AF%E9%81%93%E8%B7%AF/"/>
+      <url>/2023/02/19/%E6%9C%AA%E6%9D%A5%E6%8A%80%E6%9C%AF%E9%81%93%E8%B7%AF/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前进道路"><a href="#前进道路" class="headerlink" title="前进道路"></a>前进道路</h1><ol><li>脱离单片机，做Linux开发</li><li>做LInux驱动开发+汽车电子</li></ol><p>  ——————————</p><p><img src="/img/%E5%9B%BE%E7%89%871.jpg" alt="道路"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术日记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>状态尚可</title>
+      <link href="/2023/02/19/%E7%8A%B6%E6%80%81%E5%B0%9A%E5%8F%AF/"/>
+      <url>/2023/02/19/%E7%8A%B6%E6%80%81%E5%B0%9A%E5%8F%AF/</url>
+      
+        <content type="html"><![CDATA[<h1 id="状态尚可"><a href="#状态尚可" class="headerlink" title="状态尚可"></a>状态尚可</h1><ol><li><p>心态慢慢缓过来了，虽然还是90题左右的水平</p></li><li><p>言语、判断、资料炸坑了</p></li><li><p>还有5天了</p><p>——————</p><p>好好学习，日行一步，终到终点</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 考公日记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 考公 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>今日状态普通</title>
+      <link href="/2023/02/18/%E4%BB%8A%E6%97%A5%E7%8A%B6%E6%80%81%E6%99%AE%E9%80%9A/"/>
+      <url>/2023/02/18/%E4%BB%8A%E6%97%A5%E7%8A%B6%E6%80%81%E6%99%AE%E9%80%9A/</url>
+      
+        <content type="html"><![CDATA[<h1 id="好好生活-好好学习"><a href="#好好生活-好好学习" class="headerlink" title="好好生活 好好学习"></a>好好生活 好好学习</h1><ol><li><p>早上起来玩了</p></li><li><p>思考了一下未来的事，考上了就回家了，这里就留作吐槽的地方了；没考上就走技术路线了</p></li><li><p>依旧是90题的水平咯，言语还是得上语感，不要过度分析咯，申论今天还没看咯，依旧都有些感觉了吧，瓶颈就在这几天了，破了就上岸了</p><p>————</p><p>时间很长，回头看过去，也许都是最好的选择</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 考公日记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 考公 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>学不进去噢</title>
+      <link href="/2023/02/17/post/"/>
+      <url>/2023/02/17/post/</url>
+      
+        <content type="html"><![CDATA[<h1 id="专注力差"><a href="#专注力差" class="headerlink" title="专注力差"></a>专注力差</h1><ol><li>做试卷老是分神</li><li>听歌缓解会好不少但是还是不能一直听</li><li>考了60多分，难受噢</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 考公日记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 考公 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>胖胖橘子的第一篇博客</title>
+      <link href="/2023/02/17/%E8%83%96%E8%83%96%E6%A9%98%E5%AD%90%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/"/>
+      <url>/2023/02/17/%E8%83%96%E8%83%96%E6%A9%98%E5%AD%90%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/</url>
+      
+        <content type="html"><![CDATA[<h1 id="空气中充满了快活的气息"><a href="#空气中充满了快活的气息" class="headerlink" title="空气中充满了快活的气息"></a>空气中充满了快活的气息</h1><p>起飞</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术日记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 杂谈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2023/02/17/hello-world/"/>
+      <url>/2023/02/17/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
