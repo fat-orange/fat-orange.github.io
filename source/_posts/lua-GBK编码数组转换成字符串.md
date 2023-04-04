@@ -6,7 +6,7 @@ tags: lua
 
 # lua GBK编码数组转换成字符串
 
-{% codeblock [title] [lang:language] [url] [link text] [additional options] %}
+``` lua
 ---字节数组转字符串
 function arrayToString(array)
  local strMiddle= ''
@@ -15,4 +15,4 @@ function arrayToString(array)
  end  
  return strMiddle; 
 end 
-{% endcodeblock %}
+```
