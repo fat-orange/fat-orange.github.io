@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="lua GBK编码数组转换成字符串, 胖胖橘子">
-    <meta name="description" content="lua GBK编码数组转换成字符串[title] [lang:language] [url] [link text] [additional options]12345678---字节数组转字符串function arrayToString">
+    <meta name="description" content="lua GBK编码数组转换成字符串12345678---字节数组转字符串function arrayToString(array) local strMiddle= &#39;&#39; for i=1,#array do  strMiddle=strMi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -393,7 +393,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    49
+                    40
                 </div>
                 
 
@@ -415,7 +415,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="lua-GBK编码数组转换成字符串"><a href="#lua-GBK编码数组转换成字符串" class="headerlink" title="lua GBK编码数组转换成字符串"></a>lua GBK编码数组转换成字符串</h1><figure class="highlight plaintext"><figcaption><span>[title] [lang:language] [url] [link text] [additional options]</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---字节数组转字符串</span><br><span class="line">function arrayToString(array)</span><br><span class="line"> local strMiddle= ''</span><br><span class="line"> for i=1,#array do</span><br><span class="line">  strMiddle=strMiddle..string.char(array[i])  </span><br><span class="line"> end  </span><br><span class="line"> return strMiddle; </span><br><span class="line">end </span><br></pre></td></tr></tbody></table></figure>
+                <h1 id="lua-GBK编码数组转换成字符串"><a href="#lua-GBK编码数组转换成字符串" class="headerlink" title="lua GBK编码数组转换成字符串"></a>lua GBK编码数组转换成字符串</h1><figure class="highlight lua"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">---字节数组转字符串</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">arrayToString</span><span class="params">(array)</span></span></span><br><span class="line"> <span class="keyword">local</span> strMiddle= <span class="string">''</span></span><br><span class="line"> <span class="keyword">for</span> i=<span class="number">1</span>,#array <span class="keyword">do</span></span><br><span class="line">  strMiddle=strMiddle..<span class="built_in">string</span>.<span class="built_in">char</span>(array[i])  </span><br><span class="line"> <span class="keyword">end</span>  </span><br><span class="line"> <span class="keyword">return</span> strMiddle; </span><br><span class="line"><span class="keyword">end</span> </span><br></pre></td></tr></tbody></table></figure>
                 
             </div>
             <hr/>
