@@ -393,7 +393,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    162
+                    218
                 </div>
                 
 
@@ -422,6 +422,8 @@
 <li>宏定义全部使用大写字母<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> RX0_BUF_SIZE 		(1024)</span></span><br></pre></td></tr></tbody></table></figure></li>
 <li>结构体初始化使用声名加定义(我在分开声明和定义有过无法配置串口的错误)<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">uart_config_t</span> uart1_config ={</span><br><span class="line">	.baud_rate = <span class="number">115200</span>,</span><br><span class="line">	.data_bits = UART_DATA_8_BITS,			<span class="comment">//数据位</span></span><br><span class="line">	.parity = UART_PARITY_DISABLE,			<span class="comment">//校验位</span></span><br><span class="line">	.stop_bits = UART_STOP_BITS_1,			<span class="comment">//停止位</span></span><br><span class="line">	.flow_ctrl = UART_HW_FLOWCTRL_DISABLE	<span class="comment">//硬件流控</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure></li>
 <li>头文件放在C文件中，减少重复编译文件。</li>
+<li>一些初始化函数和标志变量应当将具有定义类型的描述放在函数名或者变量名后<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">TimerInit();</span><br><span class="line"></span><br><span class="line">timer0_flag;</span><br></pre></td></tr></tbody></table></figure></li>
+<li>大数组最好使用堆，锻炼使用堆，释放堆的习惯。</li>
 </ol>
 
                 
@@ -530,18 +532,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/04/06/%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/">
+                <a href="/2023/04/06/%E7%BC%96%E7%A8%8B%E5%9D%91%E7%82%B9/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="编程规范">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="编程坑点">
                         
-                        <span class="card-title">编程规范</span>
+                        <span class="card-title">编程坑点</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -551,9 +552,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-06
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -562,7 +563,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
