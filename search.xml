@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>编程规范</title>
+      <link href="/2023/04/06/%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/"/>
+      <url>/2023/04/06/%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/</url>
+      
+        <content type="html"><![CDATA[<h1 id="编程规范"><a href="#编程规范" class="headerlink" title="编程规范"></a>编程规范</h1><ol><li>函数命名的首字母大写，尽量不使用_进行衔接，而是使用大小字母进行衔接<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LoraInit()</span><br></pre></td></tr></tbody></table></figure></li><li>如果在多台机器编写程序，变量名应当使用一致</li><li>变量名最好都小写，使用_进行衔接<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uart1_config</span><br></pre></td></tr></tbody></table></figure></li><li>宏定义全部使用大写字母<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> RX0_BUF_SIZE (1024)</span></span><br></pre></td></tr></tbody></table></figure></li><li>结构体初始化使用声名加定义(我在分开声明和定义有过无法配置串口的错误)<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">uart_config_t</span> uart1_config ={</span><br><span class="line">.baud_rate = <span class="number">115200</span>,</span><br><span class="line">.data_bits = UART_DATA_8_BITS,<span class="comment">//数据位</span></span><br><span class="line">.parity = UART_PARITY_DISABLE,<span class="comment">//校验位</span></span><br><span class="line">.stop_bits = UART_STOP_BITS_1,<span class="comment">//停止位</span></span><br><span class="line">.flow_ctrl = UART_HW_FLOWCTRL_DISABLE<span class="comment">//硬件流控</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure></li><li>头文件放在C文件中，减少重复编译文件。</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>电子调试坑点</title>
       <link href="/2023/04/04/%E7%94%B5%E5%AD%90%E8%B0%83%E8%AF%95%E5%9D%91%E7%82%B9/"/>
       <url>/2023/04/04/%E7%94%B5%E5%AD%90%E8%B0%83%E8%AF%95%E5%9D%91%E7%82%B9/</url>
@@ -28,6 +41,31 @@
         <tags>
             
             <tag> lua </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>记录hexo多台电脑安装过程</title>
+      <link href="/2023/04/03/%E8%AE%B0%E5%BD%95hexo%E5%A4%9A%E5%8F%B0%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/"/>
+      <url>/2023/04/03/%E8%AE%B0%E5%BD%95hexo%E5%A4%9A%E5%8F%B0%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="多台电脑安装hexo"><a href="#多台电脑安装hexo" class="headerlink" title="多台电脑安装hexo"></a>多台电脑安装hexo</h1><h2 id="老电脑上的操作"><a href="#老电脑上的操作" class="headerlink" title="老电脑上的操作"></a>老电脑上的操作</h2><ol start="3"><li><p>实现的原理，主要是使用git分支来实现同步，所以我们需要先在gihub上新建一个分支。</p><p><a href="/img/hexo-1.jpeg">图片</a></p></li><li><p>标号1为需要输入新的分支，标号2为创建分支，标号3打开设置。<br><a href="/img/hexo-2.jpeg">图片</a></p></li><li><p>标号1选择分支，标号2选择分支，标号3选择默认分支</p></li><li><p>接下来需要在老电脑上，首先clone仓库到本地</p><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:username/username.github.io.git</span><br></pre></td></tr></tbody></table></figure><p>注:<a href="mailto:git@github.com">git@github.com</a>指的是你github注册的邮箱,username指的是你github的用户名</p></li><li><p>接着只留下了.git文件夹,其他的文件和文件夹全部删除(如果找不到.git文件夹，那么可能是你的隐藏文件的选项没有勾上)</p></li><li><p>然后再跳到原来存放hexo文件的位置，将除了.deploy_git，其余都复制到clone的文件夹中。</p><p>注意:1.存放hexo文件的位置应当有一个 .gitignore文件，这个文件用来表示这些文件不需要git上传,如果没有重新创建一个即可</p><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.<span class="built_in">log</span></span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></tbody></table></figure></li></ol><h2 id="新电脑上操作"><a href="#新电脑上操作" class="headerlink" title="新电脑上操作"></a>新电脑上操作</h2><ol><li><p>hexo安装在多台电脑上，主要使用了git和nodejs工具</p></li><li><p>在新电脑上首先需要安装git和nodejs，</p><p>git 淘宝镜像链接<a href="https://registry.npmmirror.com/binary.html?path=git-for-windows/">CNPM Binaries Mirror (npmmirror.com)</a></p><p>nodejs 官网 <a href="https://nodejs.org/zh-cn">Node.js (nodejs.org)</a></p></li><li><p>通过下面命令生成新的ssh key</p><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"your_email@example.com"</span></span><br></pre></td></tr></tbody></table></figure><p>注:这个<a href="mailto:your_email@example.com">your_email@example.com</a>指的是你自己github注册的邮箱</p><p>如果已经有了SSH key，可以通过下面命令查找id_rsa.pub(公钥)和id_rsa(私钥)的位置</p><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al ~/.ssh</span><br></pre></td></tr></tbody></table></figure></li><li><p>将新的id_rsa.pub(公钥)添加到你的github账户</p></li><li><p>新建一个hexo文件夹用来存放新的hexo文件，在hexo文件夹右键点击GIt bash here。输入下面命令</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:username/username.github.io.git</span><br></pre></td></tr></tbody></table></figure><p>注:<a href="mailto:git@github.com">git@github.com</a>指的是你github注册的邮箱,username指的是你github的用户名</p></li><li><p>此时依次执行</p><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></tbody></table></figure><p>接下来就可以在新电脑开始编写文章了</p></li></ol><p>注：1. 可能有部分同学会发现hexo 命令会提示无法发现没有hexo，这是因为环境变量没有安装好，自己安装一下即可</p><ol start="2"><li><p>一定要在编写文章之前进行git pull ，以此保证文章同步</p></li><li><p>编写完之后，一定要执行下列指令</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit –m add_branch</span><br><span class="line">git push</span><br></pre></td></tr></tbody></table></figure></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo安装 </tag>
             
         </tags>
       

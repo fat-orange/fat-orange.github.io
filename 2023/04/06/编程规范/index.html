@@ -4,11 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="电子调试坑点, 胖胖橘子">
-    <meta name="description" content="电子调试坑点
-芯片是有可能没用的，在测试完所有的线路以及引脚通断后，很有可能是芯片本身损坏了。
-虚焊的一个表现在于使用万用表测试通断时，如果需要用力按压才能连通，则说明很有可能引脚虚焊了。
-在使用RTOS系统时，在使用SPI控制LCD屏幕时">
+    <meta name="keywords" content="编程规范, 胖胖橘子">
+    <meta name="description" content="编程规范
+函数命名的首字母大写，尽量不使用_进行衔接，而是使用大小字母进行衔接1LoraInit()
+如果在多台机器编写程序，变量名应当使用一致
+变量名最好都小写，使用_进行衔接1uart1_config
+宏定义全部使用大写字母1#defi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>电子调试坑点 | 胖胖橘子</title>
+    <title>编程规范 | 胖胖橘子</title>
     <link rel="icon" type="image/png" href="/favicon2.png">
     
 
@@ -337,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">电子调试坑点</h1>
+                    <h1 class="description center-align post-title">编程规范</h1>
                 </div>
             </div>
         </div>
@@ -378,21 +379,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-04-04
+                    2023-04-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-04
+                    2023-04-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    200
+                    162
                 </div>
                 
 
@@ -414,10 +415,13 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="电子调试坑点"><a href="#电子调试坑点" class="headerlink" title="电子调试坑点"></a>电子调试坑点</h1><ol>
-<li>芯片是有可能没用的，在测试完所有的线路以及引脚通断后，很有可能是芯片本身损坏了。</li>
-<li>虚焊的一个表现在于使用万用表测试通断时，如果需要用力按压才能连通，则说明很有可能引脚虚焊了。</li>
-<li>在使用RTOS系统时，在使用SPI控制LCD屏幕时，需要考虑到SPI可能正在进行读取数据，所以需要等SPI操作完才能再进行另外的操作。<br>我今天使用SPI控制LCD屏幕，使用清屏函数时，直接白屏了，直到我在清屏函数前添加了延时才得以解决，所以可以推理到，实时操作系统都需要考虑<br>这些操作。</li>
+                <h1 id="编程规范"><a href="#编程规范" class="headerlink" title="编程规范"></a>编程规范</h1><ol>
+<li>函数命名的首字母大写，尽量不使用_进行衔接，而是使用大小字母进行衔接<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LoraInit()</span><br></pre></td></tr></tbody></table></figure></li>
+<li>如果在多台机器编写程序，变量名应当使用一致</li>
+<li>变量名最好都小写，使用_进行衔接<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uart1_config</span><br></pre></td></tr></tbody></table></figure></li>
+<li>宏定义全部使用大写字母<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> RX0_BUF_SIZE 		(1024)</span></span><br></pre></td></tr></tbody></table></figure></li>
+<li>结构体初始化使用声名加定义(我在分开声明和定义有过无法配置串口的错误)<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">uart_config_t</span> uart1_config ={</span><br><span class="line">	.baud_rate = <span class="number">115200</span>,</span><br><span class="line">	.data_bits = UART_DATA_8_BITS,			<span class="comment">//数据位</span></span><br><span class="line">	.parity = UART_PARITY_DISABLE,			<span class="comment">//校验位</span></span><br><span class="line">	.stop_bits = UART_STOP_BITS_1,			<span class="comment">//停止位</span></span><br><span class="line">	.flow_ctrl = UART_HW_FLOWCTRL_DISABLE	<span class="comment">//硬件流控</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure></li>
+<li>头文件放在C文件中，减少重复编译文件。</li>
 </ol>
 
                 
@@ -445,7 +449,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://fat-orange.github.io/2023/04/04/%E7%94%B5%E5%AD%90%E8%B0%83%E8%AF%95%E5%9D%91%E7%82%B9/">https://fat-orange.github.io/2023/04/04/%E7%94%B5%E5%AD%90%E8%B0%83%E8%AF%95%E5%9D%91%E7%82%B9/</a>
+                    <a href="https://fat-orange.github.io/2023/04/06/%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/">https://fat-orange.github.io/2023/04/06/%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -526,9 +530,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/04/06/%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/">
                     <div class="card-image">
@@ -546,9 +551,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -557,6 +562,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -567,13 +573,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/04/04/lua-GBK%E7%BC%96%E7%A0%81%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                <a href="/2023/04/04/%E7%94%B5%E5%AD%90%E8%B0%83%E8%AF%95%E5%9D%91%E7%82%B9/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="lua GBK编码数组转换成字符串">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="电子调试坑点">
                         
-                        <span class="card-title">lua GBK编码数组转换成字符串</span>
+                        <span class="card-title">电子调试坑点</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -593,14 +599,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/lua/">
-                        <span class="chip bg-color">lua</span>
-                    </a>
-                    
                 </div>
                 
             </div>
