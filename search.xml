@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Linux下进行开发</title>
+      <link href="/2023/04/21/Linux%E4%B8%8B%E8%BF%9B%E8%A1%8C%E5%BC%80%E5%8F%91/"/>
+      <url>/2023/04/21/Linux%E4%B8%8B%E8%BF%9B%E8%A1%8C%E5%BC%80%E5%8F%91/</url>
+      
+        <content type="html"><![CDATA[<h1 id="LinX下进行程序开发"><a href="#LinX下进行程序开发" class="headerlink" title="LinX下进行程序开发"></a>LinX下进行程序开发</h1><ol><li>首先必须要有Linux下开发的三件套Vim编辑器、gcc编译器、gbd调试工具、Makefile构建工具、git上传工具</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>编程坑点</title>
       <link href="/2023/04/06/%E7%BC%96%E7%A8%8B%E5%9D%91%E7%82%B9/"/>
       <url>/2023/04/06/%E7%BC%96%E7%A8%8B%E5%9D%91%E7%82%B9/</url>
